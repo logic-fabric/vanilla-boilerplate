@@ -1,2 +1,3 @@
-# vanilla-boilerplate
-A boilerplate for HTML / Sass / Vanilla JS projects - Jan 2022
+# Vanilla boilerplate - Jan 2022
+
+A boilerplate to quick start a HTML / Sass / Vanilla JS project.
