@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "node ./node_modules/gulp/bin/gulp.js watch",
-    "buildCSS": "node ./node_modules/gulp/bin/gulp.js buildCSS",
-    "autoprefixCSS": "node ./node_modules/gulp/bin/gulp.js autoprefixCSS"
+    "sass": "sass css/scss/main.scss css/main.css",
+    "postcss": "postcss css/main.css -o css/main.min.css",
+    "build": "npm run sass && npm run postcss",
+    "watch": "sass --watch css/scss/main.scss:css/main.css & npm run postcss"
   },
   "repository": {
     "type": "git",
@@ -19,11 +20,10 @@
   },
   "homepage": "https://github.com/logic-fabric/logic-fabric#readme",
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-sass": "^5.0.0",
-    "node-sass": "^6.0.1",
-    "sass": "^1.35.1"
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.6",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.79.3"
   },
   "dependencies": {}
 }
